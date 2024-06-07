@@ -17,6 +17,8 @@ A simple python discord bot, created for fun and to start learning about the dis
 
 v0.0.1 - 2024-06-01: Original version without commands
 
+v0.1.1 - 2024-06-01: Addition of ping command
+
 ## Getting Started
 
 ### Dependencies
@@ -41,7 +43,9 @@ Copy the `.env.example` file to `.env` and populate the relevant variables:
 
 ## Commands
 
-Coming soon!
+### Ping
+
+`!ping` - returns 'Pong! 42ms'; where '42ms' is the relevant latency
 
 ## Resources & Thanks
 

@@ -20,9 +20,20 @@ help_command = commands.DefaultHelpCommand(no_category="Commands")
 
 bot = commands.Bot(command_prefix=PREFIX, intents=intents, help_command=help_command)
 
+
 @bot.event
 async def on_ready():
     log.info(f"Logged in as {bot.user}")
+
+
+@bot.command()
+async def ping(ctx):
+    """
+    'Ping' to get a 'Pong' response with latency
+    """
+    latency = round(bot.latency * 1000)
+    log.info(f"!ping: Latency = {latency}")
+    await ctx.send(f"Pong! {latency}ms")
 
 
 bot.run(TOKEN)
